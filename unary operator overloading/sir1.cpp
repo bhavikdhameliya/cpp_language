@@ -31,4 +31,3 @@ int main()
     a++;
     b=a;
     cout<<"volume of box b is:"<<b.getdata()<<endl;
-}
