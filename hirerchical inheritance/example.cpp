@@ -1,3 +1,6 @@
+//squre and cube
+
+
 #include <iostream>
 using namespace std;
 
@@ -6,55 +9,51 @@ private:
     int num;
 
 public:
-    void getNumber()
+    void getN()
     {
         cout << "Enter an integer number: ";
         cin >> num;
     }
    
-    int returnNumber()
+    int retn()
     {
         return num;
     }
 };
-
-
 class Square : public Number {
 public:
-    int getSquare()
+    int getS()
     {
         int num, sqr;
-        num = returnNumber(); 
+        num = retn(); 
         sqr = num * num;
         return sqr;
     }
 };
-
 class Cube : public Number {
 private:
 public:
-    int getCube()
+    int getC()
     {
         int num, cube;
-        num = returnNumber(); 
+        num = retn(); 
         cube = num * num * num;
         return cube;
     }
 };
-
 int main()
 {
-    Square objS;
-    Cube objC;
+    Square S;
+    Cube C;
     int sqr, cube;
 
-    objS.getNumber();
-    sqr = objS.getSquare();
-    cout << "Square of " << objS.returnNumber() << " is: " << sqr << endl;
+    S.getN();
+    sqr = S.getS();
+    cout << "Square of  is: " << sqr << endl;
 
-    objC.getNumber();
-    cube = objC.getCube();
-    cout << "Cube   of " << objS.returnNumber() << " is: " << cube << endl;
+    C.getN();
+    cube = C.getC();
+    cout << "Cube  of is: " << cube << endl;
 
     return 0;
 }
